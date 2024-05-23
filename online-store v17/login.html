@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="login-style.css">
+</head>
+<body>
+  
+  
+  <form id="loginForm">
+  <h1>Log-in</h1>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br>
+
+    <label for="role">Role:</label>
+    <select id="role" name="role">
+      <option value="user">User</option>
+      <option value="seller">Seller</option>
+    </select><br>
+
+    <button type="submit">Login</button>
+  </form>
+  <a href="index.html" class="return-button">Return to Online Store</a>
+
+  <script src="login.js"></script>
+</body>
+</html>

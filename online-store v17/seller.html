@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Seller Interface</title>
+  <link rel="stylesheet" href="seller-style.css">
+</head>
+<body>
+
+
+  <form id="addItemForm">
+    <h1>Seller Interface</h1>
+
+	<h2>Add Item</h2>
+    <div class="form-group">
+      <label for="itemName">Item Name:</label>
+      <input type="text" id="itemName" name="itemName">
+    </div>
+    <div class="form-group">
+      <label for="itemPrice">Price:</label>
+      <input type="number" id="itemPrice" name="itemPrice">
+    </div>
+    <div class="form-group">
+      <label for="itemQuantity">Quantity:</label>
+      <input type="number" id="itemQuantity" name="itemQuantity">
+    </div>
+    <div class="form-group">
+      <label for="itemImage">Image:</label>
+      <input type="file" id="itemImage" name="itemImage">
+    </div>
+    <button type="submit">Add Item</button>
+  </form>
+    <a href="index.html" class="return-button">Return to Online Store</a>
+
+  <script src="seller.js"></script>
+</body>
+</html>

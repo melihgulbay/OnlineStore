@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Online Store</h1>
+    <button id="loginButton">Login</button>
+    <button id="registerButton">Register</button>
+    <span id="loggedInUser" class="loggedInUser"></span>
+    <span id="loggedInRole" class="loggedInRole"></span>
+    <button id="sellerPageButton" style="display: none;">Seller page</button>
+  </header>
+<div>
+  <label for="sort">Sort by Price:</label>
+  <select id="sort">
+    <option value="asc">Low to High</option>
+    <option value="desc">High to Low</option>
+  </select>
+  <input type="text" id="search" placeholder="Search by name">
+  <button onclick="sortItems()">Sort</button>
+</div>
+
+
+  <div id="items"></div>
+
+
+  <div id="cart">
+  <h2>Cart</h2>
+    <p>Total Price: <span id="totalPrice">$0.00</span></p>
+    <button onclick="purchase()">Purchase</button>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Retrieve the logged-in username from localStorage and display it
+    const loggedInUsername = localStorage.getItem('loggedInUsername');
+    if (loggedInUsername) {
+      const loggedInUserElement = document.getElementById('loggedInUser');
+      loggedInUserElement.textContent = `Logged in as: ${loggedInUsername}`;
+    }
+
+    const loggedInRole = localStorage.getItem('loggedInRole');
+    if (loggedInRole) {
+      const loggedInRoleElement = document.getElementById('loggedInRole');
+      loggedInRoleElement.textContent = `Logged in as: ${loggedInRole}`;
+
+
+      if (loggedInRole === 'seller') {
+        const sellerPageButton = document.getElementById('sellerPageButton');
+        sellerPageButton.style.display = 'inline-block';
+      }
+    }
+
+    document.getElementById('loginButton').addEventListener('click', function() {
+      window.location.href = 'login.html';
+    });
+
+    document.getElementById('registerButton').addEventListener('click', function() {
+      window.location.href = 'register.html';
+    });
+
+    document.getElementById('sellerPageButton').addEventListener('click', function() {
+      window.location.href = 'seller.html'; // Replace 'seller.html' with the actual URL of the seller page
+    });
+  </script>
+  <script src="login.js"></script>
+</body>
+</html>
