@@ -1,0 +1,1 @@
+Our online store makes shopping easy with simple login and registration options. You can filter items by price or search for them by name. There are separate accounts for sellers and customers. Sellers can change the prices of their products, and customers can add items to their cart, where the total price is automatically shown.
